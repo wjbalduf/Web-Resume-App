@@ -1,0 +1,93 @@
+.projects-page {
+  padding: 20px 40px;
+  color: #cec3f1;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a40);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  background: #7f5af0;
+  color: white;
+  padding: 8px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #6245d6;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Full-page project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  flex-grow: 1;
+  height: calc(100vh - 120px);
+}
+
+/* Each project card fills its grid cell */
+.project-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a40;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s; /* optional: smooth zoom on hover */
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Always-visible title overlay */
+.project-card p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  color: white;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
