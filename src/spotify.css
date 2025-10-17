@@ -1,0 +1,32 @@
+.spotify-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* space between sections */
+  margin-top: 40px;
+  width: 100%;
+}
+
+.spotify-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%; /* ensure section uses full width */
+}
+
+.spotify-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.spotify-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.spotify-text {
+  flex: 1;
+  max-width: 500px;
+  font-size: 1rem;
+  color: #cec3f1;
+}

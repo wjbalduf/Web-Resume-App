@@ -7,6 +7,16 @@
   flex-direction: column;
 }
 
+.investment-page {
+  padding: 20px 40px;
+  color: #cec3f1;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a40);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
 /* Header */
 .projects-header {
   display: flex;

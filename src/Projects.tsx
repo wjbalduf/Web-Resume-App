@@ -39,7 +39,7 @@ export default function Projects() {
   return (
     <div className="projects-page">
       <div className="projects-header">
-        <button className="cta back-button" onClick={() => navigate("/")}>
+        <button className="cta back-button" onClick={() => navigate(-1)}>
           Back
         </button>
         <h1 className="projects-title">Projects</h1>

@@ -1,52 +1,59 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Projects.css";
+import { useNavigate } from "react-router-dom";
+import "./spotify.css";
 
-export default function Investment() {
+export default function Spotify() {
+  const navigate = useNavigate();
+
+  // Content sections with image and text
+  const sections = [
+    {
+      img: "/images/spotify.png",
+      alt: "Spotify Dataset",
+      text: "This is the main Spotify dataset visualization showing the distribution of song features across different genres."
+    },
+    {
+      img: "/images/correlation_matrix.png",
+      alt: "Correlation Matrix",
+      text: "A correlation matrix highlighting relationships between different song features, helping identify patterns in the dataset."
+    },
+    {
+      img: "/images/comparison.png",
+      alt: "Comparison Chart",
+      text: "Comparison chart of top artists and their songs, giving insight into popular trends and music characteristics."
+    },
+    {
+      img: "/images/box_plot.png",
+      alt: "Box Plot",
+      text: "Box plots showing the distribution of song attributes like tempo, loudness, and danceability across the dataset."
+    },
+  ];
+
   return (
-    <div className="project-detail-page">
-      <div className="project-detail-header">
-        <Link to="/projects" className="cta back-button">
-          Back to Projects
-        </Link>
-        <h1>Global Investment Data Pipeline</h1>
+    <div className="investment-page">
+      {/* Header */}
+      <div className="projects-header">
+        <button className="cta back-button" onClick={() => navigate(-1)}>
+          Back
+        </button>
+        <h1 className="projects-title">Spotify Song Dataset Analysis</h1>
       </div>
 
-      <div className="project-detail-content">
-        <p>
-          The Global Investment Data Pipeline project is designed to collect,
-          process, and analyze investment data from multiple sources, providing
-          actionable insights for data-driven decision making.
-        </p>
-
-        <h2>Project Overview</h2>
-        <p>
-          The pipeline ingests data from APIs, CSV files, and financial reports,
-          cleans and transforms it, and stores it in a central database.
-          Interactive dashboards allow users to monitor performance and identify
-          trends in real-time.
-        </p>
-
-        <h2>Key Features</h2>
-        <ul>
-          <li>Automated data ingestion from multiple sources</li>
-          <li>Data cleaning and transformation</li>
-          <li>Interactive dashboards for portfolio analysis</li>
-          <li>Real-time monitoring of market trends</li>
-        </ul>
-
-        <h2>Technologies Used</h2>
-        <p>
-          Python, Pandas, SQL, Tableau, and Flask were used to build the system,
-          enabling efficient data processing, visualization, and web deployment.
-        </p>
-
-        <img
-          src="/images/investment_static.png"
-          alt="Investment Project"
-          className="project-detail-img"
-          style={{ marginTop: "20px", width: "100%", maxWidth: "600px" }}
-        />
+      {/* Sections */}
+      <div className="spotify-sections">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`spotify-section ${index % 2 === 0 ? "normal" : "reverse"}`}
+          >
+            <img
+              src={section.img}
+              alt={section.alt}
+              className="spotify-img"
+            />
+            <p className="spotify-text">{section.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
