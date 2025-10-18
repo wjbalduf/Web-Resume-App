@@ -1,20 +1,18 @@
 .projects-page {
   padding: 20px 40px;
   color: #cec3f1;
-  min-height: 100vh;
   background: linear-gradient(135deg, #0d0d0d, #1a1a40);
   display: flex;
   flex-direction: column;
 }
 
-.investment-page {
+.selected-page {
   padding: 20px 40px;
   color: #cec3f1;
+  min-height: 100%;
   background: linear-gradient(135deg, #0d0d0d, #1a1a40);
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
 }
 
 /* Header */
@@ -24,7 +22,7 @@
   justify-content: center;
   position: relative;
   margin-bottom: 20px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .back-button {

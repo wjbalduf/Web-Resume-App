@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Projects.css";
 import "./spotify.css";
 
 export default function Spotify() {
@@ -30,7 +31,7 @@ export default function Spotify() {
   ];
 
   return (
-    <div className="investment-page">
+    <div className="selected-page">
       {/* Header */}
       <div className="projects-header">
         <button className="cta back-button" onClick={() => navigate(-1)}>
