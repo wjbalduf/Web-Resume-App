@@ -1,32 +1,80 @@
+/* Make the whole page use full width */
+.selected-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a40);
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.projects-title {
+  color: #cec3f1;
+  font-size: 2rem;
+}
+
+.back-button {
+  margin-left: 5%;
+}
+
+/* Section container */
 .spotify-sections {
   display: flex;
   flex-direction: column;
-  gap: 60px; /* space between sections */
-  margin-top: 40px;
+  gap: 80px;
+  margin-top: 60px;
   width: 100%;
 }
 
+/* Each section fills page width */
 .spotify-section {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 40px;
   flex-wrap: wrap;
-  width: 100%; /* ensure section uses full width */
+  width: 100%;
+  padding: 0 60px;
+  box-sizing: border-box;
 }
 
 .spotify-section.reverse {
   flex-direction: row-reverse;
 }
 
+/* Images scale nicely and fill available space */
 .spotify-img {
+  flex: 1;
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
+  max-width: 700px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
+/* Make the first image bigger */
+.spotify-section:first-child .spotify-img {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Text takes remaining space */
 .spotify-text {
   flex: 1;
-  max-width: 500px;
-  font-size: 1rem;
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #cec3f1;
+}
+
+/* Make sure everything stays readable on small screens */
+@media (max-width: 900px) {
+  .spotify-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .spotify-img,
+  .spotify-text {
+    max-width: 100%;
+  }
 }
